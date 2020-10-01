@@ -1,0 +1,40 @@
+@import "./utils/normalize";
+@import "./utils/variables";
+@import "./base/fonts";
+@import "./base/common";
+@import "./components/container";
+@import "./components/logo";
+@import "./components/buttons";
+@import "./components/menu";
+@import "./layouts/banner";
+@import "./layouts/section";
+@import "./layouts/feature";
+@import "./layouts/practice";
+@import "./layouts/team";
+@import "./layouts/clients";
+@import "./components/footer";
+@import "./components/address";
+@import "./components/social";
+@import "./layouts/filter";
+@import "./layouts/catalog";
+@import "./components/modal";
+
+/* цвет основного текста #757575 */
+/* вторичный цвет текста #212121 */
+/* дополнительный цвет текста rgba(255, 255, 255, 0.6) */
+/* цвет логотипа #000000 */
+/* цвет акцента #2196F3 */
+/* первичный цвет фона #ffffff */
+/* вторичный цвет фона #F5F4FA */
+/* темный цвет #2f303a */
+/* цвет рамки #eeeeee */
+/* цвет слоя баннера rgba(47, 48, 58, 0.4) */
+/* основной цвет иконок #afb1b8 */
+
+/* стили для теста
+ background-color: plum;
+  outline: 1px solid blue; */
+
+/*  симмантичноее скрытие 
+:not(:focus):not(:active)
+*/

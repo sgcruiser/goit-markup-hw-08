@@ -1,0 +1,50 @@
+.practice {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.practice__list {
+  display: flex;
+  margin-top: 50px;
+}
+
+.practice__box-inside {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 370px;
+  height: 70px;
+
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.practice__image {
+  display: block;
+}
+
+.practice__item {
+  position: relative;
+  display: block;
+  width: calc((100% - 30px * 2) / 3);
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.practice__text {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-weight: $bold-font-weight;
+  line-height: calc(16 / 14);
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $primary-color;
+}

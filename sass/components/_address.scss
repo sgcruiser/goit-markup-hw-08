@@ -1,0 +1,36 @@
+.main-address {
+  margin-right: 70px;
+
+  max-width: 231px;
+}
+
+.main-address__text {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #ffffff;
+}
+
+.address {
+  font-style: normal;
+}
+
+.address__link {
+  color: rgba(255, 255, 255, 0.6);
+
+  transition-property: color;
+  transition-duration: $duration;
+  transition-timing-function: $timing-function;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+.address__item + .address__item {
+  margin-top: 9px;
+}
+
+.address__text {
+  margin-top: 0;
+  margin-bottom: 0;
+}

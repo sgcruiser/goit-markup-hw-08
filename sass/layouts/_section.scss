@@ -1,0 +1,12 @@
+.section__title {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  color: $secondary-text-color;
+
+  font-weight: $bold-font-weight;
+  font-size: 3.6rem;
+  /* 1.17 */
+  line-height: calc(42 / 36);
+  text-align: center;
+}

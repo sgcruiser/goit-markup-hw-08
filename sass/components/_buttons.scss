@@ -1,0 +1,142 @@
+.button {
+  font-family: inherit;
+}
+
+.banner__button {
+  min-width: 200px;
+  height: 50px;
+  padding-top: 10px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 10px;
+
+  border: none;
+  border-radius: 4px;
+
+  background-color: $accent-color;
+
+  color: $primary-color;
+
+  font-weight: $bold-font-weight;
+  font-size: 1.6rem;
+  /* 1.87 */
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: $accent-secondary-color;
+  }
+}
+
+.modal__form-button {
+  @extend .banner__button;
+}
+
+.subscription__button {
+  @extend .banner__button;
+}
+
+.subscription__button {
+  position: relative;
+
+  padding-left: 29px;
+
+  text-align: start;
+  transition-property: background-color;
+  transition-duration: $duration;
+  transition-timing-function: $timing-function;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: 28px;
+    transform: translateY(-50%);
+    display: block;
+    content: "";
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/svg/icon-send.svg);
+  }
+}
+
+.button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  background-color: $primary-color;
+
+  transition-property: fill;
+  transition-duration: $duration;
+  transition-timing-function: $timing-function;
+
+  cursor: pointer;
+
+  &:hover {
+    fill: $accent-color;
+  }
+}
+
+.button-close__svg {
+  width: 11px;
+  height: 11px;
+}
+
+.modal__form-button {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition-property: background-color;
+  transition-duration: $duration;
+  transition-timing-function: $timing-function;
+}
+
+.filter__btn {
+  padding: 6px 22px;
+  border: transparent;
+  border-radius: 4px;
+
+  background-color: $secondary-color;
+
+  color: $secondary-text-color;
+
+  font-weight: $medium-font-weight;
+  font-size: 1.6rem;
+  /*  1.62  */
+  line-height: calc(26 / 16);
+  letter-spacing: 0.03em;
+  cursor: pointer;
+
+  transition-property: background-color;
+  transition-duration: $duration;
+  transition-timing-function: $timing-function;
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline-color: transparent;
+    outline-width: 0;
+
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+
+    background-color: $accent-color;
+
+    color: $primary-color;
+  }
+}
