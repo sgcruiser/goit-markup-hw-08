@@ -2,6 +2,52 @@
   font-family: inherit;
 }
 
+.menu__button {
+  // display: inline-flex;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+
+  border: transparent;
+
+  @include for-size(tablet-without) {
+    width: 40px;
+    height: 40px;
+  }
+
+  @include for-size(tablet) {
+    display: none;
+  }
+
+  &.is-open .menu__icon-close {
+    display: block;
+  }
+
+  &.is-open .menu__icon-open {
+    display: none;
+  }
+}
+
+.menu__button-image {
+  width: 24px;
+  height: 16px;
+
+  // fill: $secondary-text-color;
+
+  @include for-size(tablet) {
+    display: none;
+  }
+  &:hover,
+  :focus {
+    fill: $accent-color;
+    cursor: pointer;
+  }
+}
+
+.menu__icon-close {
+  display: none;
+}
+
 .banner__button {
   min-width: 200px;
   height: 50px;
