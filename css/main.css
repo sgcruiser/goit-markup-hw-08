@@ -1465,13 +1465,31 @@ html {
 }
 
 .filter {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media (min-width: 1200px) {
+  .filter {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .filter__button {
   display: flex;
-  justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .filter__button {
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 768px) {
+  .filter__button {
+    justify-content: center;
+  }
 }
 
 .filter__item {
@@ -1482,8 +1500,26 @@ html {
   margin-right: 8px;
 }
 
+@media (max-width: 767px) {
+  .filter__item {
+    margin-bottom: 15px;
+  }
+}
+
 .catalog {
-  padding-top: 50px;
+  padding-top: 35px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .catalog {
+    padding-top: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .catalog {
+    padding-top: 50px;
+  }
 }
 
 .catalog__list {

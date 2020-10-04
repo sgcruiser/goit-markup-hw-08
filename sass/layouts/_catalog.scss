@@ -1,5 +1,13 @@
 .catalog {
-  padding-top: 50px;
+  padding-top: 35px;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-top: 30px;
+  }
+
+  @include for-size(desktop) {
+    padding-top: 50px;
+  }
 }
 
 .catalog__list {
