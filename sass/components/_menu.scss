@@ -8,27 +8,16 @@
 }
 
 .menu__box {
-  padding-top: 10px;
-  padding-bottom: 10px;
   padding-left: 15px;
   padding-right: 15px;
 
   @include for-size(tablet) {
     display: flex;
-    padding-top: 21px;
-    padding-bottom: 21px;
-  }
-
-  @include for-size(desktop) {
-    padding-top: 0;
-    padding-bottom: 0;
   }
 }
 
 .nav {
-  display: none;
-
-  @include for-size(tablet) {
+  @include for-size(tablet-without) {
     display: none;
   }
 
@@ -39,7 +28,11 @@
 
 .site-nav {
   display: flex;
-  margin-left: 93px;
+  margin-left: 88px;
+
+  @include for-size(desktop) {
+    margin-left: 93px;
+  }
 }
 
 .site-nav__item {
@@ -85,33 +78,47 @@
 }
 
 .communications {
-  @include for-size(mobile-only) {
-    display: none;
-  }
-
-  @include for-size(mobile) {
+  @include for-size(tablet-without) {
     display: none;
   }
 
   @include for-size(tablet) {
-    display: none;
+    display: flex;
+    margin-left: 84px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-direction: column;
+    justify-content: center;
   }
 
   @include for-size(desktop) {
-    display: flex;
+    // align-items: center;
     margin-left: auto;
   }
 }
 
-.communications__item + .communications__item {
-  margin-left: 50px;
+@include for-size(desktop) {
+  .communications__item + .communications__item {
+    margin-left: 50px;
+  }
 }
-
 .communications__link {
-  display: inline-flex;
-  align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    font-size: 1.2rem;
+    line-height: calc(14 / 12);
+  }
+
+  @include for-size(desktop) {
+    display: inline-flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 
   color: $primary-text-color;
   transition-property: color;
@@ -129,16 +136,30 @@
 }
 
 .communications__icon {
-  margin-right: 10px;
+  margin-right: 8px;
+
+  @include for-size(desktop) {
+    margin-right: 10px;
+  }
+
   fill: $primary-text-color;
 }
 
 .communications__envelope {
-  width: 16px;
-  height: 12px;
+  width: 14px;
+  height: 10px;
+
+  @include for-size(desktop) {
+    width: 16px;
+    height: 12px;
+  }
 }
 
 .communications__smartphone {
   width: 10px;
-  height: 16px;
+  height: 14px;
+
+  @include for-size(desktop) {
+    height: 16px;
+  }
 }

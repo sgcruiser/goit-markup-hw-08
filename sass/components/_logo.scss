@@ -1,9 +1,7 @@
 // Logo
 
 .logo {
-  padding-top: 5px;
-  padding-bottom: 5px;
-
+  display: block;
   font-size: 2.4rem;
   line-height: calc(28 / 24);
 
@@ -11,6 +9,16 @@
 
   font-family: Raleway, sans-serif;
   font-weight: $bold-font-weight;
+
+  @include for-size(tablet-without) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  @include for-size(tablet) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
 
   @include for-size(desktop) {
     padding-top: 24px;

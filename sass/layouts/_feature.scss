@@ -29,6 +29,10 @@
   font-size: 1.4rem;
   line-height: calc(16 / 14);
   text-transform: uppercase;
+
+  @include for-size(tablet-without) {
+    text-align: center;
+  }
 }
 
 .feature__item {
