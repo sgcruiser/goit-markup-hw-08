@@ -1,4 +1,6 @@
 .menu {
+  position: relative;
+
   font-weight: $medium-font-weight;
   /*  1.14 */
   line-height: calc(16 / 14);
@@ -8,11 +10,14 @@
 }
 
 .menu__box {
+  display: flex;
+
   padding-left: 15px;
   padding-right: 15px;
 
-  @include for-size(tablet) {
-    display: flex;
+  @include for-size(tablet-without) {
+    align-items: baseline;
+    justify-content: space-between;
   }
 }
 

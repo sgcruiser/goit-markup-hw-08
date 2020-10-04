@@ -61,6 +61,10 @@
 
 .team__image {
   display: block;
+
+  @include for-size(desktop-without) {
+    width: 100%;
+  }
 }
 
 .team__text {

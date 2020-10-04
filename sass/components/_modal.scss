@@ -30,9 +30,15 @@
   flex-direction: column;
   justify-content: space-between;
 
-  width: 528px;
-  height: 581px;
+  @include for-size(desktop-without) {
+    width: 450px;
+    height: 609px;
+  }
 
+  @include for-size(desktop) {
+    width: 528px;
+    height: 581px;
+  }
   padding: 40px 40px;
 
   transform: translate(-50%, -50%) scale(1);
@@ -51,7 +57,13 @@
 
   font-weight: $medium-font-weight;
   font-size: 2rem;
-  line-height: calc(23 / 20);
+
+  line-height: calc(30 / 20);
+
+  @include for-size(desktop) {
+    line-height: calc(23 / 20);
+  }
+
   text-align: center;
 
   color: $secondary-text-color;
@@ -151,6 +163,11 @@
   align-items: center;
 
   margin-top: 20px;
+
+  @include for-size(desktop-without) {
+    font-size: 1.2rem;
+    line-height: calc(14 / 12);
+  }
 }
 
 .modal__checkbox-icon {
