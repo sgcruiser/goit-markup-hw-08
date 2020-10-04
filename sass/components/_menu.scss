@@ -8,12 +8,35 @@
 }
 
 .menu__box {
-  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include for-size(tablet) {
+    display: flex;
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+
+  @include for-size(desktop) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .nav {
-  display: flex;
+  display: none;
+
+  @include for-size(tablet) {
+    display: none;
+  }
+
+  @include for-size(desktop) {
+    display: flex;
+  }
 }
+
 .site-nav {
   display: flex;
   margin-left: 93px;
@@ -62,8 +85,22 @@
 }
 
 .communications {
-  display: flex;
-  margin-left: auto;
+  @include for-size(mobile-only) {
+    display: none;
+  }
+
+  @include for-size(mobile) {
+    display: none;
+  }
+
+  @include for-size(tablet) {
+    display: none;
+  }
+
+  @include for-size(desktop) {
+    display: flex;
+    margin-left: auto;
+  }
 }
 
 .communications__item + .communications__item {

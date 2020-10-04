@@ -1,31 +1,55 @@
 .clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 60px 15px;
+
+  @include for-size(desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .clients__title {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
-  font-weight: $bold-font-weight;
-  font-size: 3.6rem;
-  /*  1.17 */
-  line-height: calc(42 / 36);
-  text-align: center;
-
-  color: $secondary-text-color;
+  @include for-size(desktop) {
+    margin-bottom: 50px;
+  }
 }
 
 .clients__list {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .clients__item {
   display: flex;
+
+  @include for-size(tablet) {
+    width: calc((100% - 30px * 2) / 3);
+  }
+
+  @include for-size(desktop) {
+    width: calc((100% - 30px * 5) / 6);
+  }
+
+  &:not(:nth-last-child(-n + 2)) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &:not(:nth-last-child(-n + 3)) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-bottom: 30px;
+    }
+  }
 }
 
 .clients__item + .clients__item {
-  margin-left: 30px;
+  @include for-size(desktop) {
+    margin-left: 30px;
+  }
 }
 
 .clients__item:nth-child(1) {
@@ -83,8 +107,16 @@
   justify-content: center;
   align-items: center;
 
-  width: 170px;
+  width: 210px;
   height: 90px;
+
+  @include for-size(tablet) {
+    width: 226px;
+  }
+
+  @include for-size(desktop) {
+    width: 170px;
+  }
 
   border: 1px solid #afb1b8;
   border-radius: 4px;

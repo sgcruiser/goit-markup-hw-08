@@ -1,9 +1,22 @@
 .feature {
-  padding-top: 94px;
+  padding: 60px 15px;
+
+  @include for-size(desktop) {
+    padding: 0 15px;
+  }
 }
 
 .feature__list {
-  display: flex;
+  @include for-size(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include for-size(desktop) {
+    display: flex;
+
+    padding-top: 94px;
+  }
 }
 
 .feature__title {
@@ -19,11 +32,36 @@
 }
 
 .feature__item {
-  width: calc((100% - 30px * 3) / 4);
-  padding-bottom: 3px;
+  width: 100%;
 
   &:not(:last-child) {
-    margin-right: 30px;
+    margin-bottom: 30px;
+
+    @include for-size(desktop) {
+      margin-right: 30px;
+      margin-bottom: 0;
+    }
+  }
+
+  @include for-size(tablet) {
+    width: calc((100% - 15px * 2) / 2);
+
+    &:nth-last-child(2) {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(2n) {
+      margin-left: 30px;
+    }
+  }
+
+  @include for-size(desktop) {
+    width: calc((100% - 30px * 3) / 4);
+    padding-bottom: 3px;
+
+    &:nth-child(2n) {
+      margin-left: 0;
+    }
   }
 
   &::before {

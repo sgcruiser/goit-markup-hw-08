@@ -1,6 +1,11 @@
 .practice {
+  display: none;
   padding-top: 94px;
   padding-bottom: 94px;
+
+  @include for-size(desktop) {
+    display: block;
+  }
 }
 
 .practice__list {
