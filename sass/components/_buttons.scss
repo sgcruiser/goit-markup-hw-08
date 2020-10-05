@@ -6,9 +6,8 @@
   // display: inline-flex;
   margin: 0;
   padding: 0;
+  border: 0;
   background-color: transparent;
-
-  border: transparent;
 
   @include for-size(tablet-without) {
     width: 40px;
@@ -28,6 +27,10 @@
   }
 }
 
+.menu__icon-close {
+  display: none;
+}
+
 .menu__button-image {
   width: 24px;
   height: 16px;
@@ -42,10 +45,6 @@
     fill: $accent-color;
     cursor: pointer;
   }
-}
-
-.menu__icon-close {
-  display: none;
 }
 
 .banner__button {

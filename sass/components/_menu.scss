@@ -1,5 +1,5 @@
 .menu {
-  position: relative;
+  // position: relative;
 
   font-weight: $medium-font-weight;
   /*  1.14 */
@@ -10,6 +10,8 @@
 }
 
 .menu__box {
+  position: relative;
+
   display: flex;
 
   padding-left: 15px;

@@ -14,7 +14,7 @@ Use a better box model (opinionated).
 *::after {
   box-sizing: border-box;
   // вспомогательная рамка -для отладки разметки
-  // outline: 2px solid red;
+  outline: 2px solid red;
 }
 
 /**
