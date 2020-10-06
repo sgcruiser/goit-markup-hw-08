@@ -1,6 +1,4 @@
 .menu {
-  // position: relative;
-
   font-weight: $medium-font-weight;
   /*  1.14 */
   line-height: calc(16 / 14);
@@ -29,10 +27,6 @@
 }
 
 .nav {
-  // @include for-size(tablet-without) {
-  //   display: none;
-  // }
-
   @include for-size(desktop) {
     display: flex;
   }
@@ -42,6 +36,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @include for-size(tablet-without) {
+    margin-bottom: 48px;
+  }
 
   @include for-size(tablet) {
     flex-direction: row;
@@ -55,6 +53,12 @@
 
 .site-nav__item {
   position: relative;
+
+  @include for-size(tablet-without) {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
 
   @include for-size(tablet) {
     &:not(:last-child) {
@@ -83,6 +87,11 @@
   padding-top: 32px;
   padding-bottom: 32px;
 
+  @include for-size(tablet-without) {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
   color: $secondary-text-color;
   transition-property: color;
   transition-duration: $duration;
@@ -98,10 +107,6 @@
 }
 
 .communications {
-  // @include for-size(tablet-without) {
-  //   display: none;
-  // }
-
   @include for-size(tablet) {
     display: flex;
     margin-left: 84px;
@@ -113,8 +118,13 @@
   }
 
   @include for-size(desktop) {
-    // align-items: center;
     margin-left: auto;
+  }
+}
+
+@include for-size(tablet-without) {
+  .communications__item + .communications__item {
+    margin-top: 12px;
   }
 }
 

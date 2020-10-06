@@ -35,7 +35,11 @@
   width: 24px;
   height: 16px;
 
-  // fill: $secondary-text-color;
+  fill: $secondary-text-color;
+
+  transition-property: fill;
+  transition-duration: $duration;
+  transition-timing-function: $timing-function;
 
   @include for-size(tablet) {
     display: none;
