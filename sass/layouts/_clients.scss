@@ -19,7 +19,7 @@
 .clients__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 
   @include for-size(mobile) {
     margin: -15px;
@@ -28,10 +28,16 @@
 
 .clients__item {
   display: flex;
-  // margin: 15px;
+  margin: 15px;
+
+  @include for-size(mobile-only) {
+    justify-content: center;
+
+    width: calc(100% - 30px * 2);
+  }
 
   @include for-size(mobile) {
-    // width: 50%;
+    display: flex;
     margin: 15px;
   }
 
@@ -43,25 +49,7 @@
   @include for-size(desktop) {
     width: calc((100% - 30px * 6) / 6);
   }
-
-  // &:not(:nth-last-child(-n + 2)) {
-  //   @media screen and (max-width: 767px) {
-  //     margin-bottom: 30px;
-  //   }
-  // }
-
-  // &:not(:nth-last-child(-n + 3)) {
-  //   @media screen and (min-width: 768px) and (max-width: 1199px) {
-  //     margin-bottom: 30px;
-  //   }
-  // }
 }
-
-// .clients__item + .clients__item {
-//   @include for-size(desktop) {
-//     margin-left: 30px;
-//   }
-// }
 
 .clients__item:nth-child(1) {
   .clients__company {

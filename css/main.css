@@ -852,7 +852,7 @@ html {
   background-position: center;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 479px) {
   .banner {
     display: block;
     padding-top: 118px;
@@ -1244,7 +1244,7 @@ html {
 .clients__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 @media (min-width: 480px) {
@@ -1255,10 +1255,19 @@ html {
 
 .clients__item {
   display: flex;
+  margin: 15px;
+}
+
+@media (max-width: 479px) {
+  .clients__item {
+    justify-content: center;
+    width: calc(100% - 30px * 2);
+  }
 }
 
 @media (min-width: 480px) {
   .clients__item {
+    display: flex;
     margin: 15px;
   }
 }
