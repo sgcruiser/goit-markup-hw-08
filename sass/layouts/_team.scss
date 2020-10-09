@@ -62,8 +62,14 @@
 .team__image {
   display: block;
 
-  @include for-size(desktop-without) {
-    width: 100%;
+  width: 100%;
+
+  @include for-size(tablet) {
+    width: 354px;
+  }
+
+  @include for-size(desktop) {
+    width: 270px;
   }
 }
 
