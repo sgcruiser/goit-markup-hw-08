@@ -13,6 +13,15 @@
   width: 100%;
   height: 100%;
 
+  @include for-size(tablet-without) {
+    padding-top: 93px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 94px;
+
+    overflow-y: scroll;
+  }
+
   background-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -25,12 +34,21 @@
   position: absolute;
   left: 50%;
   top: 50%;
+  transform: translate(-50%, -50%) scale(1);
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  @include for-size(desktop-without) {
+  @include for-size(mobile-only) {
+    // width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
     width: 450px;
     height: 609px;
   }
@@ -41,14 +59,13 @@
   }
   padding: 40px 40px;
 
-  transform: translate(-50%, -50%) scale(1);
-
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
   transition: transform 300ms linear, scale 500ms linear;
+  overflow: hidden;
 }
 
 .modal__title {
@@ -158,11 +175,17 @@
 
 // .modal__form-input
 .modal__form-checkbox {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-
   margin-top: 20px;
+
+  @include for-size(mobile-only) {
+    text-align: center;
+  }
+
+  @include for-size(mobile) {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 
   @include for-size(desktop-without) {
     font-size: 1.2rem;
