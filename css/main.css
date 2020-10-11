@@ -847,7 +847,7 @@ html {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  max-width: 480px;
+  width: 100%;
   height: 400px;
   background-color: #2f303a;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/banner/mobile/banner.jpg);
@@ -862,7 +862,6 @@ html {
 
 @media (min-width: 768px) {
   .banner {
-    max-width: 768px;
     height: 400px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/banner/tablet/banner.jpg);
   }
@@ -876,7 +875,6 @@ html {
 
 @media (min-width: 1200px) {
   .banner {
-    max-width: 1600px;
     height: 600px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/banner/desktop/banner.jpg);
   }
@@ -1266,7 +1264,7 @@ html {
 @media (max-width: 479px) {
   .clients__item {
     justify-content: center;
-    width: calc(100% - 30px * 2);
+    width: calc((100% - 30px * 2) / 2);
   }
 }
 
@@ -1401,7 +1399,8 @@ html {
 @media (min-width: 768px) and (max-width: 1199px) {
   .subscription {
     margin-top: 60px;
-    margin-left: 25%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1421,7 +1420,6 @@ html {
 }
 
 .subscription__input {
-  width: 358px;
   height: 50px;
   padding-top: 13px;
   padding-left: 16px;
@@ -1435,15 +1433,33 @@ html {
   color: #ffffff;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 479px) {
+  .subscription__input {
+    width: 100%;
+  }
+}
+
+@media (min-width: 480px) {
+  .subscription__input {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .subscription__input {
     display: block;
+  }
+}
+
+@media (max-width: 1199px) {
+  .subscription__input {
     margin-bottom: 20px;
   }
 }
 
 @media (min-width: 1200px) {
   .subscription__input {
+    width: 358px;
     margin-right: 12px;
   }
 }
@@ -1458,8 +1474,10 @@ html {
   outline-color: red;
 }
 
-.main-address {
-  max-width: 231px;
+@media (max-width: 479px) {
+  .main-address {
+    width: 100%;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -1711,12 +1729,12 @@ html {
   position: absolute;
   bottom: -100%;
   left: 0;
+  display: flex;
+  align-items: center;
   width: 100%;
   height: 100%;
-  padding-top: 77px;
   padding-left: 24px;
   padding-right: 24px;
-  padding-bottom: 77px;
   background: rgba(33, 150, 243, 0.9);
   transition-property: transform;
   transition-duration: 250ms;
@@ -1724,17 +1742,9 @@ html {
   opacity: 0;
 }
 
-@media (min-width: 768px) {
+@media screen and (max-width: 479px) {
   .catalog__description-pullout {
-    padding-top: 49px;
-    padding-bottom: 49px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .catalog__description-pullout {
-    padding-top: 63px;
-    padding-bottom: 63px;
+    overflow-y: auto;
   }
 }
 
@@ -1793,6 +1803,16 @@ html {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 767px) {
+  .backdrop {
+    padding-top: 93px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 94px;
+    overflow-y: scroll;
+  }
+}
+
 .is-hidden .modal {
   top: 25%;
   transform: translate(-150%, -100%) scale(0.1);
@@ -1802,18 +1822,28 @@ html {
   position: absolute;
   left: 50%;
   top: 50%;
+  transform: translate(-50%, -50%) scale(1);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 40px 40px;
-  transform: translate(-50%, -50%) scale(1);
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform 300ms linear, scale 500ms linear;
+  overflow: hidden;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 479px) {
+  .modal {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 1199px) {
   .modal {
     width: 450px;
     height: 609px;
@@ -1922,10 +1952,21 @@ html {
 }
 
 .modal__form-checkbox {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
   margin-top: 20px;
+}
+
+@media (max-width: 479px) {
+  .modal__form-checkbox {
+    text-align: center;
+  }
+}
+
+@media (min-width: 480px) {
+  .modal__form-checkbox {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 }
 
 @media (max-width: 1199px) {
