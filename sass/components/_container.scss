@@ -14,4 +14,26 @@
   @include for-size(desktop) {
     width: 1200px;
   }
+
+  // for responsive
+  // @include for-size(mobile) {
+  //   max-width: 480px;
+  // }
+  // @include for-size(tablet) {
+  //   max-width: 768px;
+  // }
+  // @include for-size(desktop) {
+  //   max-width: 1200px;
+  // }
+
+  // for adaptive
+  // @include for-size(mobile) {
+  //   width: 480px - 18px;
+  // }
+  // @include for-size(tablet) {
+  //   width: 768px - 18px;
+  // }
+  // @include for-size(desktop) {
+  //   width: 1200px - 18px;
+  // }
 }

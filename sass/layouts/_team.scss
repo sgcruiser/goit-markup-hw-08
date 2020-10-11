@@ -17,10 +17,6 @@
     flex-wrap: wrap;
   }
 
-  // @include for-size(desktop-without) {
-  //   margin-top: 30px;
-  // }
-
   @include for-size(desktop) {
     margin-top: 20px;
 
@@ -63,14 +59,7 @@
   display: block;
 
   width: 100%;
-
-  @include for-size(tablet) {
-    width: 354px;
-  }
-
-  @include for-size(desktop) {
-    width: 270px;
-  }
+  height: auto;
 }
 
 .team__text {

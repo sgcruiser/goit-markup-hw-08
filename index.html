@@ -139,37 +139,64 @@
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="practice__list list">
             <li class="practice__item">
-              <img
-                class="practice__image"
-                src="./images/practice/desktop-app.jpg"
-                srcset="./images/practice/desktop-app@2x.jpg 2x"
-                alt="Написание кода программы"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/practice/desktop-app.webp,
+                    ./images/practice/desktop-app@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source srcset="./images/practice/desktop-app@2x.jpg 2x" />
+                <img
+                  class="practice__image"
+                  src="./images/practice/desktop-app.jpg"
+                  alt="Написание кода программы"
+                  width="370"
+                />
+              </picture>
               <div class="practice__box-inside">
                 <p class="practice__text">Десктопные приложения</p>
               </div>
             </li>
             <li class="practice__item">
-              <img
-                class="practice__image"
-                src="./images/practice/mobile-app.jpg"
-                srcset="./images/practice/mobile-app@2x.jpg 2x"
-                alt="Создание структуры программы"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/practice/mobile-app.webp,
+                    ./images/practice/mobile-app@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source srcset="./images/practice/mobile-app@2x.jpg 2x" />
+                <img
+                  class="practice__image"
+                  src="./images/practice/mobile-app.jpg"
+                  alt="Создание структуры программы"
+                  width="370"
+                />
+              </picture>
               <div class="practice__box-inside">
                 <p class="practice__text">Мобильные приложения</p>
               </div>
             </li>
             <li class="practice__item">
-              <img
-                class="practice__image"
-                src="./images/practice/desing-solution.jpg"
-                srcset="./images/practice/desing-solution@2x.jpg 2x"
-                alt="Разработка дизайна проэкта"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/practice/desing-solution.webp,
+                    ./images/practice/desing-solution@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source srcset="./images/practice/desing-solution@2x.jpg 2x" />
+                <img
+                  class="practice__image"
+                  src="./images/practice/desing-solution.jpg"
+                  alt="Разработка дизайна проэкта"
+                  width="370"
+                />
+              </picture>
               <div class="practice__box-inside">
                 <p class="practice__text">Дизайнерские решения</p>
               </div>
@@ -186,13 +213,56 @@
 
           <ul class="team__list list">
             <li class="team__item">
-              <img
-                class="team__image"
-                src="./images/team/mobile/product-desinger.jpg"
-                srcset="./images/team/mobile/product-desinger@2x.jpg 2x"
-                alt="Дизайнер продукта"
-                width="450"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/mobile/product-desinger.webp,
+                    ./images/team/mobile/product-desinger@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/product-desinger.webp,
+                    ./images/team/tablet/product-desinger@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/desktop/product-desinger.webp,
+                    ./images/team/desktop/product-desinger@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/mobile/product-desinger.jpg,
+                    ./images/team/mobile/product-desinger@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/product-desinger.jpg,
+                    ./images/team/tablet/product-desinger@2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="./images/team/desktop/product-desinger@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  class="team__image"
+                  src="./images/team/desktop/product-desinger.jpg"
+                  alt="Дизайнер продукта"
+                  width="270"
+                />
+              </picture>
               <div class="team__text">
                 <h3 class="team__title">Игорь Демьяненко</h3>
                 <p class="team__career">Product Designer</p>
@@ -243,13 +313,56 @@
             </li>
 
             <li class="team__item">
-              <img
-                class="team__image"
-                src="images/team/mobile/frontend-developer.jpg"
-                srcset="images/team/mobile/frontend-developer@2x.jpg 2x"
-                alt="Фронтенд разработчик"
-                width="450"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/mobile/frontend-developer.webp,
+                    ./images/team/mobile/frontend-developer@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/frontend-developer.webp,
+                    ./images/team/tablet/frontend-developer@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/desktop/frontend-developer.webp,
+                    ./images/team/desktop/frontend-developer@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/mobile/frontend-developer.jpg,
+                    ./images/team/mobile/frontend-developer@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/frontend-developer.jpg,
+                    ./images/team/tablet/frontend-developer@2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="./images/team/desktop/frontend-developer@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  class="team__image"
+                  src="./images/team/desktop/frontend-developer.jpg"
+                  alt="Фронтенд разработчик"
+                  width="270"
+                />
+              </picture>
               <div class="team__text">
                 <h3 class="team__title">Ольга Репина</h3>
                 <p class="team__career">Frontend Developer</p>
@@ -300,13 +413,56 @@
             </li>
 
             <li class="team__item">
-              <img
-                class="team__image"
-                src="./images/team/mobile/marketing.jpg"
-                srcset="./images/team/mobile/marketing@2x.jpg 2x"
-                alt="Маркетолог"
-                width="450"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/mobile/marketing.webp,
+                    ./images/team/mobile/marketing@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/marketing.webp,
+                    ./images/team/tablet/marketing@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/desktop/marketing.webp,
+                    ./images/team/desktop/marketing@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/mobile/marketing.jpg,
+                    ./images/team/mobile/marketing@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/marketing.jpg,
+                    ./images/team/tablet/marketing@2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="./images/team/desktop/marketing@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  class="team__image"
+                  src="./images/team/desktop/marketing.jpg"
+                  alt="Маркетолог"
+                  width="270"
+                />
+              </picture>
               <div class="team__text">
                 <h3 class="team__title">Николай Тарасов</h3>
                 <p class="team__career">Marketing</p>
@@ -357,13 +513,56 @@
             </li>
 
             <li class="team__item">
-              <img
-                class="team__image"
-                src="./images/team/mobile/ui-desinger.jpg"
-                srcset="./images/team/mobile/ui-desinger@2x.jpg 2x"
-                alt="Дизайнер пользовательского интерфейса"
-                width="450"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/mobile/ui-desinger.webp,
+                    ./images/team/mobile/ui-desinger@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/ui-desinger.webp,
+                    ./images/team/tablet/ui-desinger@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/desktop/ui-desinger.webp,
+                    ./images/team/desktop/ui-desinger@2x.webp 2x
+                  "
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/mobile/ui-desinger.jpg,
+                    ./images/team/mobile/ui-desinger@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/ui-desinger.jpg,
+                    ./images/team/tablet/ui-desinger@2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                />
+                <source
+                  srcset="./images/team/desktop/ui-desinger@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  class="team__image"
+                  src="./images/team/desktop/ui-desinger.jpg"
+                  alt="Дизайнер пользовательского интерфейса"
+                  width="270"
+                />
+              </picture>
               <div class="team__text">
                 <h3 class="team__title">Михаил Ермаков</h3>
                 <p class="team__career">UI Designer</p>
@@ -536,15 +735,17 @@
         <div class="subscription">
           <h2 class="subscription__title">Подпишитесь на рассылку</h2>
           <form class="subscription__form" action="#">
-            <input
-              type="email"
-              class="subscription__input"
-              name="subscripe-mail"
-              placeholder="E-mail"
-              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-              autocomplete="off"
-              required
-            />
+            <label class="subscrition__form-field">
+              <input
+                type="email"
+                class="subscription__input"
+                name="subscripe-mail"
+                placeholder="E-mail"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                autocomplete="off"
+                required
+              />
+            </label>
             <button type="submit" class="subscription__button button">
               Подписаться
             </button>
