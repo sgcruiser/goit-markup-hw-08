@@ -33,7 +33,7 @@
   @include for-size(mobile-only) {
     justify-content: center;
 
-    width: calc(100% - 30px * 2);
+    width: calc((100% - 30px * 2) / 2);
   }
 
   @include for-size(mobile) {
