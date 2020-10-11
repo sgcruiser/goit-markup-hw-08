@@ -1742,7 +1742,7 @@ html {
   opacity: 0;
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 375px) {
   .catalog__description-pullout {
     overflow-y: auto;
   }
@@ -1755,6 +1755,13 @@ html {
   line-height: calc(28 / 18);
   /* or 156% */
   color: #ffffff;
+}
+
+@media screen and (max-width: 375px) {
+  .catalog__description-text {
+    font-size: 1.7rem;
+    line-height: calc(27 / 17);
+  }
 }
 
 .catalog__text {

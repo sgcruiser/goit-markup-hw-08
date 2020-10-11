@@ -86,7 +86,7 @@
   padding-left: 24px;
   padding-right: 24px;
 
-  @media screen and (max-width: 479px) {
+  @media screen and (max-width: 375px) {
     overflow-y: auto;
   }
 
@@ -105,6 +105,11 @@
   font-size: 1.8rem;
   line-height: calc(28 / 18);
   /* or 156% */
+
+  @media screen and (max-width: 375px) {
+    font-size: 1.7rem;
+    line-height: calc(27 / 17);
+  }
 
   color: $primary-color;
 }
