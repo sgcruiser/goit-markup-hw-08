@@ -28,12 +28,12 @@
 
   // for adaptive
   // @include for-size(mobile) {
-  //   width: 480px - 18px;
+  //   width: calc(480px - 18px);
   // }
   // @include for-size(tablet) {
-  //   width: 768px - 18px;
+  //   width: calc(768px - 18px);
   // }
   // @include for-size(desktop) {
-  //   width: 1200px - 18px;
+  //   width: calc(1200px - 18px);
   // }
 }
