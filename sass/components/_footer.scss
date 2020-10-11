@@ -40,7 +40,8 @@
 .subscription {
   @media (min-width: 768px) and (max-width: 1199px) {
     margin-top: 60px;
-    margin-left: 25%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   @include for-size(desktop-without) {
@@ -59,7 +60,6 @@
 }
 
 .subscription__input {
-  width: 358px;
   height: 50px;
 
   padding-top: 13px;
@@ -77,11 +77,24 @@
 
   color: $primary-color;
 
-  @include for-size(desktop-without) {
+  @include for-size(mobile-only) {
+    width: 100%;
+  }
+
+  @include for-size(mobile) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     display: block;
+  }
+
+  @include for-size(desktop-without) {
     margin-bottom: 20px;
   }
+
   @include for-size(desktop) {
+    width: 358px;
     margin-right: 12px;
   }
 
