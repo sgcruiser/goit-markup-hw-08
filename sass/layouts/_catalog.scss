@@ -86,24 +86,9 @@
   padding-left: 24px;
   padding-right: 24px;
 
-  @media screen and (min-width: 320px) and (max-width: 480px) {
-    overflow-y: scroll;
+  @media screen and (max-width: 479px) {
+    overflow-y: auto;
   }
-
-  // @include for-size(mobile) {
-  //   padding-top: 77px;
-  //   padding-bottom: 77px;
-  // }
-
-  // @include for-size(tablet) {
-  //   padding-top: 49px;
-  //   padding-bottom: 49px;
-  // }
-
-  // @include for-size(desktop) {
-  //   padding-top: 63px;
-  //   padding-bottom: 63px;
-  // }
 
   background: rgba(33, 150, 243, 0.9);
 
